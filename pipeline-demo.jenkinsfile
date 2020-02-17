@@ -12,7 +12,8 @@ node {
     }
     
      stage('Build') {
-            tool name: 'Maven-3.5.0', type: 'maven'
-            sh "mvn -DskipTests -U clean package"
+        echo 'Starting demo pipeline - Build'
+        gitBuild 
+        echo 'Starting demo pipeline - Builded'
      }
 }
