@@ -4,10 +4,15 @@
 
 node {
     stage('Checkout') {
-        echo 'Starting demo pipeline'
+        echo 'Starting demo pipeline - Checkout'
         gitCheckout (
             branch : 'master',
             url : 'https://github.com/stefanycos/microservice-repo.git'
         )
+    }
+    
+    stage('Build') {
+        echo 'Starting demo pipeline - Build'
+        gitBuild 
     }
 }
