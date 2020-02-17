@@ -4,9 +4,10 @@
 
 node {
     stage('Demo') {
-        echo 'Starting demo pipleine'
-        HelloWorld (
-            solutionPath : 'Testing'
+        echo 'Starting demo pipeline'
+        checkout (
+            branch : 'Testing',
+            url : 'Test'
         )
     }
 }
