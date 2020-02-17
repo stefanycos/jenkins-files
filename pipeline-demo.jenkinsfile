@@ -12,7 +12,7 @@ node {
     stage('Build') {
        gitBuild ()
     }
-    stage('Start') {
-       run ()
+    stage('Start Application') {
+       startApplication ()
     }
 }
