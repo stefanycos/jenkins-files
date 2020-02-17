@@ -3,10 +3,12 @@
 @Library('shared-library-demo')_
 
 node {
-    
     stage('Demo') {
         echo 'Starting demo pipleine'
-        Checkout 
+        Checkout(
+            url : "Test URL",
+            credentialId : "Test credentialId",
+            branchName : "Test branchName"
+        )
     }
-    
 }
