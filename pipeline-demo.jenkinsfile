@@ -6,7 +6,7 @@ node {
     
     stage('Demo') {
         echo 'Starting demo pipleine'
-        Checkout url: 'http://localhost:8080/testing', credentialId: 'dskaIJ54dsasAs', branchName: 'MASTER'
+        Checkout 
     }
     
 }
