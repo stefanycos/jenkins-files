@@ -3,11 +3,11 @@
 @Library('shared-library-demo')_
 
 node {
-    stage('Demo') {
+    stage('Checkout') {
         echo 'Starting demo pipeline'
         checkout (
-            branch : 'Testing',
-            url : 'Test'
+            branch : 'master',
+            url : 'https://github.com/stefanycos/microservice-repo.git'
         )
     }
 }
