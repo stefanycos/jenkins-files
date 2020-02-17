@@ -5,10 +5,8 @@
 node {
     stage('Demo') {
         echo 'Starting demo pipleine'
-        Checkout(
-            url : 'Test URL',
-            credentialId : 'Test credentialId',
-            branchName : 'Test branchName'
+        HelloWorld (
+            solutionPath : 'Testing'
         )
     }
 }
