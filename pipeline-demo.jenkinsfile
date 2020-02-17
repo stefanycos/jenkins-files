@@ -4,16 +4,12 @@
 
 node {
     stage('Checkout') {
-        echo 'Starting demo pipeline - Checkout'
         gitCheckout (
             branch : 'master',
             url : 'https://github.com/stefanycos/springboot-client.git'
         )
     }
-    
-     stage('Build') {
-        echo 'Starting demo pipeline - Build'
-        gitBuild ()
-        echo 'Starting demo pipeline - Builded'
-     }
+    stage('Build') {
+       gitBuild ()
+    }
 }
