@@ -7,7 +7,7 @@ node {
         echo 'Starting demo pipeline - Checkout'
         gitCheckout (
             branch : 'master',
-            url : 'https://github.com/stefanycos/microservice-repo.git'
+            url : 'https://github.com/stefanycos/springboot-client.git'
         )
     }
     
