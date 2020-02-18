@@ -2,7 +2,7 @@
 @Library('shared-library-demo')_
 
 node {
-    stage('Checkout') {
+   /* stage('Checkout') {
         gitCheckout (
             branch : 'master',
             url : 'https://github.com/stefanycos/springboot-client.git'
@@ -15,5 +15,10 @@ node {
     
     stage('Validate Application') {
        validateApplication ()
+    }*/
+    
+    stage('Get Users') {
+       def aprovadores = getSmudUsers ()
+       echo "Aprovadores: $aprovadores" 
     }
 }
