@@ -1,15 +1,8 @@
 #!groovy
 @Library('shared-library-demo')_
 
-import io.wcm.devops.jenkins.pipeline.utils.logging.Logger
-import io.wcm.devops.jenkins.pipeline.utils.logging.LogLevel
-
-Logger.init(steps, LogLevel.INFO)
-Logger log = new Logger(this)
-
 node {
     stage('Checkout') {
-        log.info("Starting checkout...")
         gitCheckout (
             branch : 'master',
             url : 'https://github.com/stefanycos/springboot-client.git'
@@ -17,12 +10,10 @@ node {
     }
     
     stage('Build') {
-       log.info("Starting build...") 
        gitBuild ()
     }
     
     stage('Validate Application') {
-       log.info("Starting validation...")
        validateApplication ()
     }
 }
